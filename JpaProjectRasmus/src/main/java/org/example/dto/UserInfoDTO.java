@@ -8,29 +8,26 @@ import java.util.stream.Collectors;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import lombok.Value;
 import org.example.model.UserInfo;
 import org.example.model.Hobby;
 
-@Getter
-@Setter
-@ToString
+@Value
 public class UserInfoDTO {
 
-    private final int userId;
-    private final String username;
-    private final String firstName;
-    private final String lastName;
-    private final String email;
-    private final List<String> phoneNumbers;
-    private final String streetName;
-    private final String streetNumber;
-    private final String cityName;
-    private final String regionName;
-    private final String municipalityName;
-    private final List<String> hobbies;
+      String username;
+      String firstName;
+      String lastName;
+      String email;
+      List<String> phoneNumbers;
+      String streetName;
+      String streetNumber;
+      String cityName;
+      String regionName;
+      String municipalityName;
+      List<String> hobbies;
 
     public UserInfoDTO(UserInfo userInfo) {
-        this.userId = userInfo.getUser().getUserId();
         this.username = userInfo.getUser().getUsername();
         this.firstName = userInfo.getFirstName();
         this.lastName = userInfo.getLastName();

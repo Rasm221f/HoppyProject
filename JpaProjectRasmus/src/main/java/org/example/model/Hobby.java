@@ -2,12 +2,15 @@ package org.example.model;
 
 import jakarta.persistence.*;
 import java.util.List;
-import lombok.Getter;
-import lombok.Setter;
 
-@Entity(name = "hobby")
+import lombok.*;
+
+@Entity
 @Getter
 @Setter
+@NoArgsConstructor
+@RequiredArgsConstructor
+@AllArgsConstructor
 public class Hobby {
 
     @Id
@@ -28,5 +31,6 @@ public class Hobby {
 
     @ManyToMany(mappedBy = "hobbies")
     private List<UserInfo> userInfos;
+
 }
 

@@ -19,7 +19,7 @@ public class Address {
     private String streetNumber;
 
     @ManyToOne
-    @JoinColumn(name = "areaId")
+    @JoinColumn(name = "zip")
     private Zipcode zipcode;
 
     @OneToMany(mappedBy = "address")
